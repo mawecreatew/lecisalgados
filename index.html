@@ -328,6 +328,7 @@ footer{background:var(--vinho);color:#fff;padding-block:28px calc(18px + env(saf
 .barra .info small{display:block;font-weight:600;font-size:.78rem;color:var(--sol-claro)}
 .barra .btn{background:var(--ouro);color:var(--vinho-escuro);box-shadow:none;padding:.85rem 1.2rem;font-size:.82rem;flex:none}
 .fundo{position:fixed;inset:0;z-index:60;background:rgba(30,10,10,.55);display:flex;justify-content:flex-end}
+@media (max-width:520px){.fundo{background:var(--branco)}}
 .gaveta{background:var(--branco);width:min(460px,100%);height:100%;overflow-y:auto;padding:calc(22px + env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) 20px;display:grid;gap:20px;align-content:start;animation:entra .25s ease}
 @keyframes entra{from{transform:translateX(30px);opacity:0}to{transform:none;opacity:1}}
 .gaveta header{display:flex;justify-content:space-between;align-items:center;gap:10px}
