@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<style>body{margin:0}</style>
+<meta name="theme-color" content="#F3B23A">
+<style>body{margin:0}.tinta-topo{position:fixed;top:0;left:0;right:0;height:max(6px,env(safe-area-inset-top,0px));background:#F3B23A;z-index:30;pointer-events:none}</style>
 <title>Leci Salgados</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Salgadinhos e churros por cento para a sua festa. Mais de 10 anos de sabor. Encomendas pelo WhatsApp e retirada no Limoeiro.">
@@ -426,6 +427,8 @@ footer{background:var(--vinho);color:#fff;padding-block:28px calc(18px + env(saf
 
     </head>
 <body>
+<div class="tinta-topo" id="tinta-topo" aria-hidden="true"></div>
+
 <header class="topo">
       <div class="wrap">
         <a class="marca-logo" href="#inicio" aria-label="Leci Salgados, início"><img data-img="logo" width="380" height="249" alt="Logo Leci Salgados"></a>
@@ -923,5 +926,13 @@ footer{background:var(--vinho);color:#fff;padding-block:28px calc(18px + env(saf
 })();
 </script>
 
+<script>
+(function(){
+  var b = document.getElementById("tinta-topo"), h = document.querySelector(".hero");
+  if(!b || !h) return;
+  function confere(){ b.hidden = h.getBoundingClientRect().bottom <= 0; }
+  addEventListener("scroll", confere, {passive:true}); addEventListener("resize", confere); confere();
+})();
+</script>
 </body>
 </html>
