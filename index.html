@@ -83,7 +83,7 @@ a{color:inherit}
   background:
    var(--sol-1);
   padding-bottom:110px;overflow:hidden;isolation:isolate}
-.hero::before,.chamada::before{content:"";position:absolute;z-index:-2;left:var(--cx,68%);top:var(--cy,46%);width:300vmax;height:300vmax;margin:-150vmax 0 0 -150vmax;background:repeating-conic-gradient(from 0deg,var(--sol-1) 0deg 7deg,var(--sol-2) 7deg 14deg);animation:gira 120s linear infinite}
+.hero::before,.chamada::before{content:"";position:absolute;z-index:-2;left:var(--cx,68%);top:var(--cy,46%);width:200vmax;height:200vmax;margin:-100vmax 0 0 -100vmax;background:repeating-conic-gradient(from 0deg,var(--sol-1) 0deg 7deg,var(--sol-2) 7deg 14deg);animation:gira 120s linear infinite}
 .hero::after,.chamada::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at var(--cx,68%) var(--cy,46%),rgba(255,236,170,.95) 0,rgba(255,215,110,.55) 16%,rgba(249,178,30,0) 46%);animation:brilho 5s ease-in-out infinite}
 @keyframes gira{to{transform:rotate(360deg)}}
 @keyframes brilho{50%{opacity:.75}}
@@ -291,6 +291,7 @@ section{position:relative;padding-block:70px}
 
 /* Chamada final */
 .chamada{--cx:50%;--cy:50%;text-align:center;color:#fff;background:var(--sol-1);overflow:hidden;isolation:isolate}
+.hero,.chamada{clip-path:inset(0);contain:paint}
 .chamada h2{position:relative;z-index:2;font-size:clamp(2rem,5vw,3.4rem);text-shadow:0 4px 0 var(--vinho)}
 .chamada p{position:relative;z-index:2;margin:14px auto 26px;max-width:30em;font-weight:700;color:var(--vinho-escuro);font-size:1.08rem}
 .chamada .btn{position:relative;z-index:2}
