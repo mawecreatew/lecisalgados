@@ -657,7 +657,7 @@ footer{background:var(--vinho);color:#fff;padding-block:28px calc(18px + env(saf
           <a href="https://wa.me/5547984930896" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.5 8.5 0 1 1 21 11.5z"/></svg></a>
         </div>
     </div>
-    <div class="copia"><span>© 2026 Leci Salgados. Todos os direitos reservados.</span><span>Site criado por <a href="https://instagram.com/mawecreate" target="_blank" rel="noopener">MaweCreate</a></span></div>
+    <div class="copia"><span>© 2026 Leci Salgados. Todos os direitos reservados.</span><span><a href="privacidade.html">Política de privacidade</a> · Site criado por <a href="https://instagram.com/mawecreate" target="_blank" rel="noopener">MaweCreate</a></span></div>
   </div>
 </footer>
 
@@ -933,6 +933,25 @@ footer{background:var(--vinho);color:#fff;padding-block:28px calc(18px + env(saf
   if(!b || !h) return;
   function confere(){ b.hidden = h.getBoundingClientRect().bottom <= 0; }
   addEventListener("scroll", confere, {passive:true}); addEventListener("resize", confere); confere();
+})();
+</script>
+
+<!-- Aviso de cookies e Microsoft Clarity (o Clarity só carrega se o visitante aceitar) -->
+<style>.ck{position:fixed;left:16px;right:16px;bottom:16px;z-index:60;max-width:460px;padding:18px 20px;border-radius:18px;background:var(--branco);color:var(--vinho-escuro);border:2px solid var(--vinho);box-shadow:0 18px 44px rgba(61,14,18,.28);font-family:Montserrat,system-ui,sans-serif;font-size:14px;line-height:1.5;font-weight:500}.ck[hidden]{display:none}.ck strong{font-weight:800}.ck a{color:inherit}.ck-b{display:flex;gap:10px;margin-top:12px}.ck-b button{font:inherit;font-weight:700;font-size:14px;min-height:42px;padding:0 20px;border-radius:999px;cursor:pointer;border:2px solid var(--vinho);background:transparent;color:var(--vinho)}.ck-b button[data-c="aceito"]{background:var(--vinho);color:#fff}</style>
+<div class="ck" id="ck" role="dialog" aria-label="Aviso de cookies" hidden>
+  <p><strong>Este site usa cookies</strong> para entender como os visitantes usam a página e melhorar a sua experiência. <a href="privacidade.html">Saiba mais</a></p>
+  <div class="ck-b"><button type="button" data-c="aceito">Aceitar</button><button type="button" data-c="recusado">Recusar</button></div>
+</div>
+<script>
+(function(){
+  var K='leci-cookies', ID='zjznz0v2ok', ok=false;
+  function get(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function set(v){try{localStorage.setItem(K,v)}catch(e){}}
+  function load(){if(ok)return;ok=true;(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script",ID);window.clarity('consent');}
+  var box=document.getElementById('ck'), c=get();
+  if(c==='aceito') load();
+  if(!c) setTimeout(function(){box.hidden=false},2600);
+  box.addEventListener('click',function(e){var b=e.target.closest('[data-c]');if(!b)return;set(b.getAttribute('data-c'));box.hidden=true;if(b.getAttribute('data-c')==='aceito')load();});
 })();
 </script>
 </body>
