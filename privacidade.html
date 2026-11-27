@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidade | Leci Salgados</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#FFF6DF;color:#3D0E12;font-family:'Montserrat',system-ui,sans-serif;font-size:16px;line-height:1.7}
+main{max-width:720px;margin:0 auto;padding:48px 20px 64px}
+a{color:#5B1A1F}
+.voltar{display:inline-block;margin-bottom:28px;font-weight:700;text-decoration:none}
+h1{font-family:'Montserrat',system-ui,sans-serif;font-weight:400;font-size:clamp(32px,6vw,44px);line-height:1.1;margin:0 0 8px}
+.data{color:#6b3a3d;font-size:14px;margin:0 0 32px}
+h2{font-family:'Montserrat',system-ui,sans-serif;font-weight:400;font-size:22px;margin:32px 0 8px}
+p,li{color:#6b3a3d}
+ul{padding-left:20px}
+button{font:inherit;font-weight:700;font-size:15px;margin-top:8px;min-height:46px;padding:0 22px;border-radius:999px;border:0;cursor:pointer;background:#5B1A1F;color:#FFFFFF}
+.msg{font-size:14px;margin-top:10px}
+footer{border-top:1px solid #f0d9a8;margin-top:48px;padding-top:20px;font-size:14px;color:#6b3a3d}
+</style>
+</head>
+<body>
+<main>
+  <a class="voltar" href="/">← Voltar ao site</a>
+  <h1>Política de privacidade</h1>
+  <p class="data">Atualizada em novembro de 2026</p>
+
+  <p>Esta página explica, de forma simples, como o site da Leci Salgados trata as informações de quem visita.</p>
+
+  <h2>Quais informações são usadas</h2>
+  <p>Este site não pede cadastro nem guarda seu nome, telefone ou e-mail. Quando você toca em um botão de WhatsApp, a conversa acontece direto no aplicativo do WhatsApp.</p>
+  <p>Se você aceitar os cookies, usamos o Microsoft Clarity para entender, de forma anônima, como o site é usado:</p>
+  <ul>
+    <li>páginas e partes do site que foram vistas</li>
+    <li>cliques e rolagem da página</li>
+    <li>tipo de aparelho e navegador</li>
+    <li>região aproximada da visita</li>
+  </ul>
+
+  <h2>Para que usamos</h2>
+  <p>Somente para melhorar o site e o atendimento: saber o que as pessoas mais procuram e o que pode ficar mais fácil de encontrar. Não vendemos nem compartilhamos essas informações para fins de propaganda.</p>
+
+  <h2>Quem processa os dados</h2>
+  <p>As informações de navegação são processadas pela Microsoft, responsável pelo Clarity, de acordo com a <a href="https://privacy.microsoft.com/pt-br/privacystatement" target="_blank" rel="noopener">declaração de privacidade da Microsoft</a>.</p>
+
+  <h2>A escolha é sua</h2>
+  <p>Você pode aceitar ou recusar os cookies no aviso que aparece no site. Se recusar, nada é registrado. Você pode mudar sua escolha quando quiser:</p>
+  <button type="button" id="refazer">Mudar minha escolha de cookies</button>
+  <p class="msg" id="msg" hidden>Pronto. O aviso vai aparecer de novo quando você voltar ao site.</p>
+
+  <h2>Contato</h2>
+  <p>Dúvidas sobre esta política? Fale com a Leci Salgados pelo WhatsApp <a href="https://wa.me/5547984930896" target="_blank" rel="noopener">(47) 98493-0896</a>.</p>
+
+  <footer>Leci Salgados · Site criado por <a href="https://mawecreate.com.br" target="_blank" rel="noopener">MaweCreate</a></footer>
+</main>
+<script>
+document.getElementById('refazer').addEventListener('click',function(){
+  try{localStorage.removeItem('leci-cookies')}catch(e){}
+  document.getElementById('msg').hidden=false;
+});
+</script>
+</body>
+</html>
